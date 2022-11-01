@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="sass/main.css">
+</head>
+<body>
+
+
+	<style>
+		*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  position: relative;
+  line-height: 1.4;
+  font-weight: 400;
+  overflow-x: hidden;
+  margin: 0;
+  height: 300vh;
+  font-family: "Roboto Serif", serif;
+}
+
+p {
+  margin: 0;
+}
+
+iframe {
+  width: 100%;
+  height: 50vh;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul li,
+ol li {
+  list-style: none;
+  display: block;
+  margin: 0;
+}
+
+span {
+  display: inline-block;
+}
+
+ul, ol {
+  display: block;
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  outline: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.site-wrap {
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  padding: 0 15px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.eps-generation-wrp-bnr__banner {
+  position: relative;
+  background-image: url("../img/main-banner.jpg");
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 31%;
+}
+.eps-generation-wrp-bnr__link {
+  position: absolute;
+  top: 60%;
+  left: 13%;
+  margin-right: 8px;
+  font-size: 20px;
+}
+.eps-generation-wrp-bnr__link strong {
+  display: inline-block;
+  color: #78818A;
+}
+.eps-generation-wrp-bnr__link a {
+  padding: 6px 21px;
+  background-color: #000000;
+  border-radius: 30px;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+.eps-generation-wrp-bnr__link a:hover {
+  background-color: #565656;
+}
+.eps-generation-wrp-info {
+  max-width: 1660px;
+  width: 100%;
+  margin: -22px auto 0 auto;
+}
+.eps-generation-wrp-info__descriptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  box-shadow: -10px -9px 10px 2px rgba(34, 60, 80, 0.2), 10px -9px 10px 2px rgba(34, 60, 80, 0.2);
+  background-color: #fff;
+  border-radius: 40px 40px 0 0;
+  border-bottom: 1px solid #EFEFF0;
+}
+.eps-generation-wrp-info__item {
+  display: inline-block;
+  max-width: 350px;
+  width: 100%;
+  padding: 45px 54px 45px 30px;
+  border-radius: 20px;
+  border: 3px solid #D3D6DD;
+  margin-bottom: 50px;
+}
+.eps-generation-wrp-info__item:first-child {
+  margin-right: 57px;
+}
+.eps-generation-wrp-info__subtitle {
+  margin-bottom: 17px;
+  color: #2F80ED;
+  font-size: 24px;
+  font-weight: 500;
+}
+.eps-generation-wrp-info__desc {
+  color: #000;
+  font-size: 14px;
+}
+.eps-generation-wrp-certificate-info__prices {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #EFEFF0;
+}
+.eps-generation-wrp-certificate-info__prices h2 {
+  max-width: 1125px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+.eps-generation-wrp-certificate-info__information {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+.eps-generation-wrp-certificate-info__item {
+  width: 100%;
+}
+.eps-generation-wrp-certificate-info__image {
+  position: relative;
+  background-image: url("../img/percent.png");
+  background-repeat: no-repeat;
+  width: 171px;
+  height: 81px;
+  margin: 0 auto 40px auto;
+}
+.eps-generation-wrp-certificate-info__percent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 33px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.eps-generation-wrp-certificate-info__desc {
+  max-width: 171px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+.eps-generation-wrp-certificate-info__min, .eps-generation-wrp-certificate-info__max {
+  display: block;
+  font-size: 18px;
+}
+.eps-generation-wrp-gift-voucher {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 35px 0;
+}
+.eps-generation-wrp-gift-voucher h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.eps-generation-wrp-gift-voucher__crumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.eps-generation-wrp-gift-voucher__crumb-item {
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 14px;
+  position: relative;
+}
+.eps-generation-wrp-gift-voucher__crumb-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -2px;
+  width: 3px;
+  height: 3px;
+  background: #000;
+  border-radius: 50%;
+}
+.eps-generation-wrp-gift-voucher__crumb-item:first-child {
+  padding-left: 0;
+}
+.eps-generation-wrp-gift-voucher__crumb-item:last-child {
+  padding-right: 0;
+}
+.eps-generation-wrp-gift-voucher__text {
+  display: block;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 10px;
+  color: #9BA2AC;
+}
+.eps-generation-wrp-gift-voucher__forms {
+  display: flex;
+  max-width: 785px;
+  width: 100%;
+  margin: 0 auto;
+}
+.eps-generation-wrp-gift-voucher__background {
+  margin-right: 45px;
+}
+.eps-generation-wrp-gift-voucher__img {
+  border-bottom: 2px solid #EFEFF0;
+  padding-bottom: 20px;
+  min-width: 445px;
+}
+.eps-generation-wrp-gift-voucher__email {
+  text-align: center;
+  border-bottom: 2px solid #EFEFF0;
+}
+.eps-generation-wrp-gift-voucher__email span {
+  position: relative;
+  font-size: 13px;
+  padding: 15px 0;
+}
+.eps-generation-wrp-gift-voucher__email span::before {
+  content: url("../img/mail.png");
+  position: absolute;
+  left: -24px;
+}
+.eps-generation-wrp-gift-voucher__btn-change {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-bottom: 1px solid #EFEFF0;
+}
+.eps-generation-wrp-gift-voucher__tab {
+  color: #7B828A;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 29px;
+  border-radius: 4px;
+  border: 1px solid #EFEFF0;
+}
+.eps-generation-wrp-gift-voucher__tab:first-child {
+  margin-right: 11px;
+}
+.eps-generation-wrp-gift-voucher__tab-contents {
+  margin-top: 20px;
+}
+.eps-generation-wrp-gift-voucher__tab-contents input[type=text],
+.eps-generation-wrp-gift-voucher__tab-contents input[type=email],
+.eps-generation-wrp-gift-voucher__tab-contents input[type=tel] {
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #EFEFF0;
+  background-color: #FFFFFF;
+  padding: 10px 15px;
+  font-size: 10px;
+}
+.eps-generation-wrp-gift-voucher__tab-contents input[type=text]::-webkit-input-placeholder,
+.eps-generation-wrp-gift-voucher__tab-contents input[type=email]::-webkit-input-placeholder,
+.eps-generation-wrp-gift-voucher__tab-contents input[type=tel]::-webkit-input-placeholder {
+  color: #C5C5C7;
+}
+.eps-generation-wrp-gift-voucher__tab-contents input[type=text]:focus,
+.eps-generation-wrp-gift-voucher__tab-contents input[type=email]:focus,
+.eps-generation-wrp-gift-voucher__tab-contents input[type=tel]:focus {
+  box-shadow: none;
+}
+.eps-generation-wrp-gift-voucher__tab-contents input[type=text]:focus::-webkit-input-placeholder,
+.eps-generation-wrp-gift-voucher__tab-contents input[type=email]:focus::-webkit-input-placeholder,
+.eps-generation-wrp-gift-voucher__tab-contents input[type=tel]:focus::-webkit-input-placeholder {
+  color: #000;
+}
+.eps-generation-wrp-gift-voucher__inp-wrp {
+  display: flex;
+  align-items: center;
+}
+.eps-generation-wrp-gift-voucher__total {
+  width: 75% !important;
+  margin-right: 10px;
+}
+.eps-generation-wrp-gift-voucher__count {
+  width: 25% !important;
+}
+.eps-generation-wrp-gift-voucher__radio {
+  margin-bottom: 10px;
+  margin-left: 12px;
+}
+.eps-generation-wrp-gift-voucher__face, .eps-generation-wrp-gift-voucher__entrepreneur {
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.eps-generation-wrp-gift-voucher__face label, .eps-generation-wrp-gift-voucher__entrepreneur label {
+  margin-left: 4px;
+  font-size: 10px;
+  color: #7B828A;
+}
+.eps-generation-wrp-gift-voucher__face {
+  margin-bottom: 8px;
+}
+.eps-generation-wrp-gift-voucher__email-v {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #EFEFF0;
+}
+.eps-generation-wrp-gift-voucher__conclusion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #7B828A;
+}
+.eps-generation-wrp-gift-voucher__btn-electronic {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #0000D0;
+  padding: 12px 0;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.eps-generation-wrp-gift-voucher__btn-electronic:hover {
+  background-color: #3b3be4;
+}
+.eps-generation-wrp-gift-voucher__title {
+  font-size: 17px;
+  color: #7B828A;
+  margin-bottom: 11px;
+}
+.eps-generation-wrp-gift-voucher__wrp-sum {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.eps-generation-wrp-gift-voucher__toogle-sum {
+  width: 17%;
+  padding: 10px 0;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 10px;
+  color: #7B828A;
+  margin-right: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.eps-generation-wrp-gift-voucher__toogle-sum:last-child {
+  margin-right: 0;
+}
+
+.form__input {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 8px;
+  background-position: right 0.35rem center;
+  border: 1px solid #e5e5e5;
+  transition: border-color 0.15s linear;
+}
+.form__input:required:focus:invalid {
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.form__input:required:valid {
+  border-color: #76d176;
+  background-size: 30px;
+  background-position-x: right;
+  background-image: url("https://images0.persgroep.net/rcs/EIj4U6EEhZ7Hwx1dyn286ppEtBE/diocontent/68808440/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.8");
+}
+
+.eps-generation-wrp-gift-voucher__crumb-item:last-child:after {
+  display: none;
+}
+
+.tab-active-calc {
+  background-color: #7B828A;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tabs {
+  cursor: pointer;
+}
+
+.in-active-tab {
+  display: none;
+}
+
+.active-tab {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .animated {
+    /*CSS transitions*/
+    transition-property: none !important;
+    /*CSS transforms*/
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    animation: none !important;
+  }
+}/*# sourceMappingURL=main.css.map */
+	</style>
+	
+	
+<div class="site-wrap">
+	<div class="eps-generation">
+		<div class="eps-generation-wrp-bnr">
+			<div class="eps-generation-wrp-bnr__banner">
+				<div class="eps-generation-wrp-bnr__link">
+					<strong>Купить как</strong>
+					<a href="#">Физлицо</a>
+				</div>
+			</div>
+		</div>
+		<div class="eps-generation-wrp-info">
+			<div class="eps-generation-wrp-info__descriptions">
+				<div class="eps-generation-wrp-info__item">
+					<div class="eps-generation-wrp-info__subtitle">Электронные</div>
+					<span class="eps-generation-wrp-info__desc">Отправим код активации на ваш email. 
+						Укажите код, например в открытке, грамоте, 
+						дипломе и вручите тому, 
+						кого хотите поздравить.</span>
+				</div>
+				<div class="eps-generation-wrp-info__item">
+					<div class="eps-generation-wrp-info__subtitle">Пластиковые</div>
+					<span class="eps-generation-wrp-info__desc">Отправим код активации на ваш email. 
+						Укажите код, например в открытке, грамоте, 
+						дипломе и вручите тому, 
+						кого хотите поздравить.</span>
+				</div>
+			</div>
+		</div>
+		<div class="eps-generation-wrp-certificate-info">
+			<div class="eps-generation-wrp-certificate-info__prices">
+				<h2>При приобретении подарочных сертификатов <br/>
+					или  электронных сертификатов действует система скидок</h2>
+				<div class="eps-generation-wrp-certificate-info__information">
+					<div class="eps-generation-wrp-certificate-info__item">
+						<div class="eps-generation-wrp-certificate-info__image">
+							<span class="eps-generation-wrp-certificate-info__percent">- 5%</span>
+						</div>
+						<div class="eps-generation-wrp-certificate-info__desc">
+							<span class="eps-generation-wrp-certificate-info__min">От 500 000 тенге</span>
+							<span class="eps-generation-wrp-certificate-info__max">до 1 000 000 тенге</span>
+						</div>
+					</div>
+					<div class="eps-generation-wrp-certificate-info__item">
+						<div class="eps-generation-wrp-certificate-info__image">
+							<span class="eps-generation-wrp-certificate-info__percent">- 8%</span>
+						</div>
+						<div class="eps-generation-wrp-certificate-info__desc">
+							<span class="eps-generation-wrp-certificate-info__min">От 1 000 000 тенге</span>
+							<span class="eps-generation-wrp-certificate-info__max">до 3 000 000 тенге</span>
+						</div>
+					</div>
+					<div class="eps-generation-wrp-certificate-info__item">
+						<div class="eps-generation-wrp-certificate-info__image">
+							<span class="eps-generation-wrp-certificate-info__percent">- 10%</span>
+						</div>
+						<div class="eps-generation-wrp-certificate-info__desc">
+							<span class="eps-generation-wrp-certificate-info__min">От 3 000 000 тенге</span>
+							<span class="eps-generation-wrp-certificate-info__max">и более</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Это вынести в отдельный блок "Начало" -->
+		<div class="eps-generation-wrp-gift-voucher">
+			<h2>Подарочные сертификаты в пару кликов</h2>
+			<ul class="eps-generation-wrp-gift-voucher__crumb">
+				<li class="eps-generation-wrp-gift-voucher__crumb-item"><span>Задайте номинал</span></li>
+				<li class="eps-generation-wrp-gift-voucher__crumb-item"><span>Оставьте заявку в форме ниже</span></li>
+				<li class="eps-generation-wrp-gift-voucher__crumb-item"><span>Менеджер по заказу свяжется с вами</span></li>
+				<li class="eps-generation-wrp-gift-voucher__crumb-item"><span>Оплатите и получите сертификаты на email</span></li>
+			</ul>
+			<span class="eps-generation-wrp-gift-voucher__text">
+				Подарочные сертификаты действительны при оплате во всех розничных магазинах «Меломан», «MARWIN» и «Комфорт».
+			</span>
+			<div class="eps-generation-wrp-gift-voucher__forms">
+				<div class="eps-generation-wrp-gift-voucher__background">
+					<img src="img/bnr.png" class="eps-generation-wrp-gift-voucher__img">
+					<div class="eps-generation-wrp-gift-voucher__email">
+						<span>Доставка на электронную почту</span>
+					</div>
+				</div>
+				<div class="eps-generation-wrp-gift-voucher__yellowcrown-form">
+					<div class="tabs eps-generation-wrp-gift-voucher__btn-change">
+						<div class="tab eps-generation-wrp-gift-voucher__tab tab-active-calc">Электронные</div>
+						<div class="tab eps-generation-wrp-gift-voucher__tab">Пластиковые</div>
+					</div>
+					<div class="eps-generation-wrp-gift-voucher__tab-contents">
+						<div class="tab-content active-tab">
+							<form action="" method="POST" class="js-form-validate">
+								<div class="eps-generation-wrp-gift-voucher__inp-wrp">
+									<div class="some-form__line eps-generation-wrp-gift-voucher__total">
+										<input id="electronic_figure" class="form__input" required  onKeyPress="fieldNumber()"; pattern=".{4,}" minlength="4" maxlength="6" placeholder="Введите сумму от 1 000 ₸ до 100 000 ₸" type="text">
+									</div>
+									<div class="some-form__line eps-generation-wrp-gift-voucher__count">
+										<input id="electronic_count" class="form__input" required  onKeyPress="fieldNumber()"; pattern=".{1,}" minlength="1" maxlength="3" placeholder="Кол-во" type="text">
+									</div>
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__organization some-form__line">
+									<input type="text" class="form__input" required placeholder="Название организации" >
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__radio">
+									<div class="eps-generation-wrp-gift-voucher__face">
+										<input type="radio" id="face" checked />
+										<label for="face">Юридическое лицо</label>
+									</div>
+									<div class="eps-generation-wrp-gift-voucher__entrepreneur">
+										<input type="radio" id="entrepreneur" />
+										<label for="entrepreneur">Индивидуальный предприниматель</label>
+									</div>
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__inn some-form__line">
+									<input class="form__input" required onKeyPress="fieldNumber()"; pattern=".{12,}" minlength="12" maxlength="12" type="text" placeholder="БИН/ИИН" >
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__contact-person some-form__line">
+									<input class="form__input" required type="text" placeholder="Контактное лицо" >
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__phone some-form__line">
+									<input class="form__input" required type="tel" name="phone" placeholder="Телефон" >
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__email-v some-form__line">
+									<input class="form__input" required type="email" name="mail" placeholder="Введите email адрес" >
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__conclusion">
+									<span class="eps-generation-wrp-gift-voucher__figure">Итоговая сумма</span>
+									<span class="eps-generation-wrp-gift-voucher__result">0 ₸</span>
+								</div>
+								<input type="submit" value="Отправить заявку" name="electronic_certificate" class="eps-generation-wrp-gift-voucher__btn-electronic form__submit"></input>
+							</form>
+						</div>
+						<div class="tab-content">
+							<form action="" method="POST" class="js-form-validate">
+								<div class="eps-generation-wrp-gift-voucher__sum">
+									<span class="eps-generation-wrp-gift-voucher__title">Выбирайте сумму</span>
+										<div class="eps-generation-wrp-gift-voucher__wrp-sum">
+											<div class="eps-generation-wrp-gift-voucher__toogle-sum tab-active-calc">1000</div>
+											<div class="eps-generation-wrp-gift-voucher__toogle-sum">5000</div>
+											<div class="eps-generation-wrp-gift-voucher__toogle-sum">10 000</div>
+											<div class="eps-generation-wrp-gift-voucher__toogle-sum">50 000</div>
+											<div class="eps-generation-wrp-gift-voucher__toogle-sum">100 000</div>
+										</div>
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__certificates">
+									<input class="form__input" required type="text" minlength="1" maxlength="3" pattern=".{1,}" onKeyPress="fieldNumber()"; placeholder="Количество сертификатов">
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__organization">
+									<input class="form__input" required type="text" placeholder="Название организации">
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__inn">
+									<input class="form__input" required type="text" pattern=".{12,}" minlength="12" maxlength="12" onKeyPress="fieldNumber()"; placeholder="БИН/ИИН">
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__phone">
+									<input class="form__input" required type="tel" placeholder="Телефон контактного лица">
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__email-v">
+									<input class="form__input" required type="email" placeholder="Введите email адрес">
+								</div>
+								<div class="eps-generation-wrp-gift-voucher__conclusion">
+									<span class="eps-generation-wrp-gift-voucher__figure">Итоговая сумма</span>
+									<span class="eps-generation-wrp-gift-voucher__result" id="out">0 ₸</span>
+								</div>
+								<input type="submit" value="Отправить заявку" name="plastic_certificate" class="eps-generation-wrp-gift-voucher__btn-electronic"></input>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- //Это вынести в отдельный блок "КОНЕЦ"-->
+	</div>
+
+	
+</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
+
+<script>
+
+// const out = document.getElementById('out').innerText;
+// const countInp = document.querySelector('.count');
+// const scuare = document.querySelectorAll('.div');
+// scuare.forEach(item => {
+//     item.addEventListener('click', (e) => {
+//     scuare.forEach(el=> {
+//     el.classList.remove('active');
+//     });
+//     item.classList.add('active');
+//   });
+
+//   scuare.forEach(elm => {
+//     elm.addEventListener('click',  e => {
+//       const value = e.target.innerText;
+//       if(countInp.value != '') {
+//         out = sumCalc(value, countInp.value);
+//         countInp.addEventListener('input', e => {
+//           const inpValue = e.target.value;
+//           out = sumCalc(value, inpValue);
+//         });
+//       }  
+//     });
+//   });
+// });
+
+// countInp.addEventListener('input', e => {
+//   const inpValue = e.target.value;
+//   scuare.forEach(elm => {
+//     if(elm.classList.contains('active')) {
+//       out = sumCalc(inpValue, elm.innerText);
+//     }
+//   });
+// });
+
+
+// function sumCalc(value, count) {
+//   out = '';
+//   return value * count;
+// }
+
+// ----------------------------------------
+
+  
+  $('.eps-generation-wrp-gift-voucher__phone input[type="tel"]').inputmask('+7 (999) 999 99 99', {
+    clearMaskOnLostFocus: true,
+  });
+
+
+const fieldNumber = () => {
+	event.keyCode < 48 || event.keyCode > 57 ? event.returnValue = false : '';
+}
+
+
+const countInp = document.querySelector('.eps-generation-wrp-gift-voucher__certificates input[type="text"]');
+const out = document.getElementById('out');
+const wrpSum = document.querySelectorAll('.eps-generation-wrp-gift-voucher__toogle-sum');
+
+
+wrpSum.forEach(chl => {
+	chl.addEventListener('click', e => {
+		wrpSum.forEach(elmClass => {
+			elmClass.classList.remove('tab-active-calc')
+		});
+			chl.classList.add('tab-active-calc');
+	});
+});
+
+
+
+
+wrpSum.forEach((elm) => {
+    elm.addEventListener('click',  e => {
+      const value = e.target.innerText.replace(/ /g,'');
+      if(countInp.value != '') {
+        out.innerHTML = sumCalc(value, countInp.value);
+        countInp.addEventListener('input', e => {
+          const inpValue = e.target.value;		  
+          out.innerHTML = sumCalc(value, inpValue);
+        });
+      }  
+    });
+  });
+
+
+countInp.addEventListener('input', e => {
+  const inpValue = e.target.value;
+  wrpSum.forEach(elm => {
+    if(elm.classList.contains('tab-active-calc')) {
+      	out.innerHTML = sumCalc(inpValue, elm.innerText.replace(/ /g,''));
+    }
+  });
+});
+
+
+
+function sumCalc(value, count) {
+  return value * count + ' ₸';
+}
+
+
+	const tabContent = document.querySelectorAll('.eps-generation-wrp-gift-voucher__tab-contents input[type="radio"]');
+	tabContent.forEach(elm => {
+		elm.addEventListener('click', e => {
+			tabContent.forEach(check => {
+			if (check != e.target)
+				check.checked = false;
+			});
+		});
+	});
+
+	const electroFigureInp = document.getElementById('electronic_figure'),
+	electronicCountInp = document.getElementById('electronic_count');
+	const resultCount = document.querySelector('.eps-generation-wrp-gift-voucher__result');
+
+
+	const prices = document.querySelector('.eps-generation-wrp-gift-voucher__inp-wrp');
+	prices.addEventListener('keyup', () => {
+			const figure = document.getElementById('electronic_figure').value,
+			count = document.getElementById('electronic_count').value;
+			resultCount.innerText = figure * count + ' ₸';
+		});
+
+	
+	const tabs = document.querySelectorAll('.tab');
+	const tabsContent = document.querySelectorAll('.tab-content');
+	tabs.forEach((elmTab, indexTab) => {
+			elmTab.id = indexTab;
+			elmTab.addEventListener('click', e => {
+				tabs.forEach(elmClass => {elmClass.classList.remove('tab-active-calc')});
+				elmTab.classList.add('tab-active-calc')
+			});
+			tabsContent.forEach((elmContent, indexContent) => {
+			elmTab.addEventListener('click', e => {
+			const targetId = e.target.id;
+				const idContent = elmContent.id = indexContent;
+				if(targetId == idContent && !elmContent.classList.contains('active-tab') ||
+					targetId == idContent && elmContent.classList.contains('active-tab')) {
+					elmContent.classList.add('active-tab');
+				} else {
+					elmContent.classList.remove('active-tab');
+				}
+			});
+		});
+	});
+
+</script>
+
+
+
+	
+
+</body>
+</html>
